@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "info-bar": "../../widgets/info-bar/info-bar"
+    "info-bar": "../../components/info-bar/info-bar",
+    "todo-frame": "../../components/todo-frame/todo-frame"
   }
 }

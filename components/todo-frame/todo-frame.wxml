@@ -1,0 +1,21 @@
+<view class="todo-frame">
+  <view class="todo-frame__box" wx:for="{{todoGroup}}" wx:for-item="group">
+    <view class="todo-frame__box__tl">
+      <view class="todo-frame__box__tl__txt">{{group.title}}</view>
+    </view>
+    <view class="todo-frame__box__ctrl">
+      <image class="todo-frame__icon--del" src="./images/icon-delete.svg" mode="widthFix"></image>
+      <image class="todo-frame__icon--share" src="./images/icon-share.svg"  mode="widthFix"></image>
+    </view>
+    <view class="todo-frame__box__list">
+      <view class="todo-frame__box__list__item" wx:for="{{group.items}}" wx:for-item="item">
+        <image class="todo-frame__icon--checkbox" wx-if="{{item.checked}}"  mode="widthFix" src="./images/icon-checkbox--checked.svg"></image>
+        <image class="todo-frame__icon--checkbox" wx-else src="./images/icon-checkbox.svg"  mode="widthFix"></image>
+        <view class="todo-frame__box__list__item__txt">{{item.content}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="todo-frame__add">
+    <image class="todo-frame__icon--add" src="./images/icon-add.svg"></image>
+  </view>
+</view>

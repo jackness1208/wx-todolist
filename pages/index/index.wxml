@@ -1,5 +1,8 @@
 <!--index.wxml-->
-<info-bar bind:updateUserInfo="onUpdateUserInfo" nick="{{userInfo.nickName}}" cover="{{userInfo.avatarUrl}}"></info-bar>
+<view class="page-index">
+  <info-bar bind:updateUserInfo="onUpdateUserInfo" nick="{{userInfo.nickName}}" cover="{{userInfo.avatarUrl}}"></info-bar>
+  <todo-frame class="index-todo-frame"></todo-frame>
+</view>
 <!--
 <view class="container">
   <view class="userinfo">

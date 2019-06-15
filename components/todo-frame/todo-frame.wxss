@@ -1,0 +1,85 @@
+.todo-frame {
+  margin: 8px;
+}
+.todo-frame__box {
+  border: 1px solid #ddd;
+  position: relative;
+  margin: 8px 0;
+}
+.todo-frame__box__tl {
+  height: 30px;
+  padding-left: 8px;
+  padding-right: 80px;
+  border-bottom: 1px solid #ddd;
+}
+.todo-frame__box__tl__txt {
+  line-height: 30px;
+  color: #333;
+  font-size: 16px;
+}
+.todo-frame__box__ctrl {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  height: 30px;
+}
+.todo-frame__box__ctrl:after {
+  content: '';
+  width: 0;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.todo-frame__icon--del {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+.todo-frame__icon--share {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.todo-frame__box__list__item {
+  padding: 0 8px 0 38px;
+  position: relative;
+  border-top: 1px solid #ddd;
+}
+.todo-frame__box__list__item:first-child {
+  border-top: 0;
+}
+.todo-frame__box__list__item .todo-frame__icon--checkbox {
+  position: absolute;
+  width: 20px;
+  height: 20x;
+  left: 8px;
+  top: 5px;
+}
+.todo-frame__box__list__item__txt {
+  line-height: 30px;
+}
+.todo-frame__add {
+  text-align: center;
+  height: 30px;
+  border: 1px dashed #ddd;
+  margin: 8px 0;
+}
+.todo-frame__add:after {
+  content: '';
+  width: 0;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.todo-frame__icon--add {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+}

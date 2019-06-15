@@ -51,9 +51,16 @@
   top: 5px;
   vertical-align: middle;
 }
+.info-bar__ctrl:after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 0;
+  vertical-align: middle;
+}
 .info-bar__ctrl__upload {
   display: inline-block;
   vertical-align: middle;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
