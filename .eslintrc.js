@@ -8,10 +8,15 @@ module.exports = {
     'browser': true
   },
   globals: {
-    $: true,
-    Vue: true,
-    Vuex: true,
-    VueRouter: true
+    'window': true,
+    'document': true,
+    'App': true,
+    'Page': true,
+    'Component': true,
+    'Behavior': true,
+    'wx': true,
+    'worker': true,
+    'getApp': true
   },
   extends: 'airbnb-base',
   plugins: [
@@ -27,7 +32,17 @@ module.exports = {
     'linebreak-style': 0,
     'no-param-reassign': [2, { 'props': false }],
     'comma-dangle': [2, 'never'],
-    'quote-props': ["error", "consistent"],
+    'quote-props': [
+      1,
+      'as-needed',
+      {
+        'unnecessary': true
+      }
+    ],
+    'semi': [
+      'error',
+      'never'
+    ],
     // async 语句需要有 await
     'require-await': "error"
   }
