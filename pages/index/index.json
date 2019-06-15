@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "info-bar": "../../widgets/info-bar/info-bar"
+  }
 }

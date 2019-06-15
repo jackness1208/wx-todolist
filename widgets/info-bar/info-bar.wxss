@@ -1,0 +1,59 @@
+.info-bar__login {
+  padding: 0;
+  border: none;
+  background: transparent;
+  line-height: 0;
+}
+.info-bar__login:after {
+  border: none;
+}
+.info-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 30px;
+  padding: 5px 8px;
+  font-size: 0;
+  background: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+}
+.info-bar__left {
+  position: absolute;
+  left: 8px;
+  top: 5px;
+}
+.info-bar__cover {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  overflow: hidden;
+  border-radius: 100%;
+}
+
+.info-bar__nick {
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  line-height: 30px;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.info-bar__ctrl {
+  position: absolute;
+  right: 8px;
+  height: 30px;
+  top: 5px;
+  vertical-align: middle;
+}
+.info-bar__ctrl__upload {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}

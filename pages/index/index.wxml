@@ -1,4 +1,6 @@
 <!--index.wxml-->
+<info-bar bind:updateUserInfo="onUpdateUserInfo" nick="{{userInfo.nickName}}" cover="{{userInfo.avatarUrl}}"></info-bar>
+<!--
 <view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
@@ -11,3 +13,4 @@
     <text class="user-motto">{{motto}}</text>
   </view>
 </view>
+-->

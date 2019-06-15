@@ -1,0 +1,15 @@
+<view class="info-bar">
+  <view class="info-bar__left">
+    <button wx:if="{{!nick && canIUse}}" open-type="getUserInfo" bind:getuserinfo="loginClick" class="info-bar__login">
+      <image class="info-bar__cover" src="./images/icon-someone.svg" mode="widthFix"></image>
+      <text class="info-bar__nick">some one</text>
+    </button>
+    <view wx:else>
+      <image class="info-bar__cover" src="{{cover}}" mode="widthFix"></image>
+      <text class="info-bar__nick">{{nick}}</text>
+    </view>
+  </view>
+  <view class="info-bar__ctrl">
+    <image class="info-bar__ctrl__upload" src="./images/icon-upload.svg" mode="widthFix" bindtap="uploadClick"></image>
+  </view>
+</view>
