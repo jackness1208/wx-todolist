@@ -17,19 +17,18 @@
   color: #333;
   font-size: 16px;
 }
+.todo-frame__box__tl__ipt {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+}
 .todo-frame__box__ctrl {
   position: absolute;
   top: 0;
   right: 8px;
   height: 30px;
 }
-.todo-frame__box__ctrl:after {
-  content: '';
-  width: 0;
-  height: 100%;
-  display: inline-block;
-  vertical-align: middle;
-}
+
 .todo-frame__icon--del {
   display: inline-block;
   width: 20px;
@@ -46,9 +45,12 @@
 }
 
 .todo-frame__box__list__item {
-  padding: 0 8px 0 38px;
+  padding: 5px 8px 5px 38px;
   position: relative;
   border-top: 1px solid #ddd;
+}
+.todo-frame__box__list__item--add .todo-frame__icon--checkbox{
+  opacity: 0.5;
 }
 .todo-frame__box__list__item:first-child {
   border-top: 0;
@@ -63,18 +65,15 @@
 .todo-frame__box__list__item__txt {
   line-height: 30px;
 }
+.todo-frame__box__list__item__textarea {
+  min-height: 22px;
+  width: 100%;
+}
 .todo-frame__add {
   text-align: center;
   height: 30px;
   border: 1px dashed #ddd;
   margin: 8px 0;
-}
-.todo-frame__add:after {
-  content: '';
-  width: 0;
-  height: 100%;
-  display: inline-block;
-  vertical-align: middle;
 }
 .todo-frame__icon--add {
   display: inline-block;
@@ -82,4 +81,11 @@
   width: 20px;
   height: 20px;
   opacity: 0.5;
+}
+.todo-frame__middle-align:after {
+  content: '';
+  width: 0;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
 }
