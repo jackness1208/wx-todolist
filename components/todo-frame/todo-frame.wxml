@@ -1,26 +1,83 @@
 <view class="todo-frame">
-  <view class="todo-frame__box" wx:for="{{todoGroup}}" wx:for-item="group" wx:key="index">
+  <view
+    class="todo-frame__box"
+    wx:for="{{todoGroup}}"
+    wx:for-item="group"
+    wx:key="key"
+    wx:for-index="index"
+  >
     <view class="todo-frame__box__tl todo-frame__middle-align">
-      <input class="todo-frame__box__tl__ipt" type="text" conmit-type="done" value="{{group.title}}" />
+      <input
+        class="todo-frame__box__tl__ipt"
+        type="text"
+        conmit-type="done"
+        value="{{group.title}}"
+      />
     </view>
     <view class="todo-frame__box__ctrl todo-frame__middle-align">
-      <image class="todo-frame__icon--del" src="./images/icon-delete.svg" mode="widthFix"></image>
-      <image class="todo-frame__icon--share" src="./images/icon-share.svg"  mode="widthFix"></image>
+      <image
+        class="todo-frame__icon--del"
+        src="./images/icon-delete.svg"
+        mode="widthFix"
+      ></image>
+      <image
+        class="todo-frame__icon--share"
+        src="./images/icon-share.svg"
+        mode="widthFix"
+      ></image>
     </view>
     <view class="todo-frame__box__list">
-      <view class="todo-frame__box__list__item" wx:for="{{group.items}}" wx:for-item="item" wx:key="i">
-        <image class="todo-frame__icon--checkbox" wx-if="{{item.checked}}"  mode="widthFix" src="./images/icon-checkbox--checked.svg"></image>
-        <image class="todo-frame__icon--checkbox" wx-else src="./images/icon-checkbox.svg"  mode="widthFix"></image>
-        <textarea class="todo-frame__box__list__item__textarea" auto-height="true" value="{{item.content}}"></textarea>
+      <view
+        class="todo-frame__box__list__item"
+        wx:for="{{group.items}}"
+        wx:for-item="item"
+        wx:key="subkey"
+        wx:for-index="subindex"
+      >
+        <image
+          class="todo-frame__icon--checkbox"
+          wx-if="{{item.checked}}"
+          mode="widthFix"
+          src="./images/icon-checkbox--checked.svg"
+          data-index="{{index}}"
+          data-subindex="{{subindex}}"
+          bindtap="checkboxChange"
+        ></image>
+        <image
+          class="todo-frame__icon--checkbox"
+          wx-else
+          src="./images/icon-checkbox.svg"
+          mode="widthFix"
+          data-index="{{index}}"
+          data-subindex="{{subindex}}"
+          bindtap="checkboxChange"
+        ></image>
+        <textarea
+          class="todo-frame__box__list__item__textarea"
+          auto-height="true"
+          data-index="{{index}}"
+          data-subindex="{{subindex}}"
+          value="{{item.content}}"
+          bindconfirm="editItem"
+        ></textarea>
       </view>
       <view class="todo-frame__box__list__item todo-frame__box__list__item--add">
-        <image class="todo-frame__icon--checkbox" wx-if="{{item.checked}}"  mode="widthFix" src="./images/icon-checkbox--checked.svg"></image>
-        <image class="todo-frame__icon--checkbox" wx-else src="./images/icon-checkbox.svg"  mode="widthFix"></image>
-        <textarea class="todo-frame__box__list__item__textarea" auto-height="true" value="{{item.content}}"></textarea>
+        <image
+          class="todo-frame__icon--checkbox"
+          src="./images/icon-checkbox.svg"
+          mode="widthFix"
+        ></image>
+        <textarea
+          class="todo-frame__box__list__item__textarea"
+          auto-height="true"
+          data-index="{{index}}"
+          value="{{addItemValue[index]}}"
+          bindconfirm='addItem'
+        ></textarea>
       </view>
     </view>
   </view>
   <view class="todo-frame__add todo-frame__middle-align">
-    <image class="todo-frame__icon--add" src="./images/icon-add.svg"></image>
+    <image class="todo-frame__icon--add" src="./images/icon-add.svg" bindtap="addGroup"></image>
   </view>
 </view>

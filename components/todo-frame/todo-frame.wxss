@@ -60,13 +60,14 @@
   width: 20px;
   height: 20x;
   left: 8px;
-  top: 5px;
+  top: 11px;
 }
 .todo-frame__box__list__item__txt {
   line-height: 30px;
 }
 .todo-frame__box__list__item__textarea {
-  min-height: 22px;
+  min-height: 30px;
+  line-height: 30px;
   width: 100%;
 }
 .todo-frame__add {
